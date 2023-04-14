@@ -1,0 +1,13 @@
+Requirments:
+Symfony 8.1
+NodeJs 18.16.0
+
+Setup:
+
+1. symfony composer install
+2. bin/console doctrine:database:create
+3. bin/console doctrine:schema:update --force
+4. bin/console fruits:fetch
+5. symfony run -d --allow-http
+6. npm install
+7. npm run build
