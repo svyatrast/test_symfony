@@ -1,5 +1,8 @@
 <template>
     <v-container class="my-5">
+        <v-btn class="mx-2" to="/favorites">
+            Favorites
+        </v-btn>
         <h1 class="mb-5">All Fruits</h1>
 
         <v-row class="mb-5">
@@ -9,12 +12,12 @@
 
             <v-col cols="12" md="6">
                 <v-autocomplete
-                    v-model="selectedFamilies"
-                    :items="families"
-                    label="Filter by family"
-                    multiple
-                    clearable
-                    chips
+                        v-model="selectedFamilies"
+                        :items="families"
+                        label="Filter by family"
+                        multiple
+                        clearable
+                        chips
                 ></v-autocomplete>
             </v-col>
         </v-row>
@@ -28,7 +31,9 @@
                     </v-card-title>
 
                     <v-card-actions>
-                        <v-btn :disabled="isFavorite(fruit) || favorites.length >= 10" @click="addToFavorites(fruit)">Add to favorites</v-btn>
+                        <v-btn :disabled="isFavorite(fruit) || favorites.length >= 10" @click="addToFavorites(fruit)">
+                            Add to favorites
+                        </v-btn>
                     </v-card-actions>
                 </v-card>
             </v-col>
